@@ -12,7 +12,7 @@ connection.connect(function(err) {
     return console.error('error: ' + err.message);
   }
 
-  let createTable = `create table if not exists Table(
+  let createTable = `create table if not exists Mesa(
                           id int primary key auto_increment,
                           Coluna1 varchar(255)not null,
                           Coluna2 tinyint(1) not null default 0
