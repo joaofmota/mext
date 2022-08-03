@@ -1,3 +1,4 @@
+-- insert the variables into '' 
 
 -- tabela user --
   -- add user --no repeat username
@@ -8,7 +9,6 @@ WHERE NOT EXISTS (
     SELECT user_username FROM user WHERE user_username = ''
 ) LIMIT 1;
 
-
   -- tabela region --
     -- add region --no repeat region
 INSERT INTO region (region)
@@ -16,8 +16,6 @@ SELECT * FROM (SELECT '') AS tmp
 WHERE NOT EXISTS (
     SELECT region FROM region WHERE region = ''
 ) LIMIT 1;
-
-
 
 -- tabela weather --
    -- add wheater --
