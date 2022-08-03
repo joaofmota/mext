@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+	  <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label>Username: <input type="text" name="first-name" required /></label>
+        <label>Age: <input type="date" name="last-name" required /></label>
+        <label>Enter Your Email: <input type="email" name="email" required /></label>
+        <label>Country
+          <select name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Portugal</option>
+            <option value="2">Spain</option>
+            <option value="3">France</option>
+            <option value="4">Italia</option>
+            </label>
+           </select>
+          <label>Level:
+          <select name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Beginner</option>
+            <option value="2">Intermediate</option>
+            <option value="3">Advanced</option>
+            <option value="4">Professional</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+  
+          <input type="checkbox" name="terms" class="inline" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
