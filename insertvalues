@@ -1,14 +1,30 @@
 
 -- tabela user --
-INSERT INTO `mext`.`user` (`user_username`, `user_name`, `user_sex`, `user_birthdate`, `user_email`, `user_level`, `country_id` ) VALUES ('', '', '', '', '', '', '')--
+  -- add user --no repeat username
+INSERT INTO user (user_username, user_firstname, user_lastname, user_sex, user_birthdate, user_email, country_id, user_level)
+SELECT * FROM (SELECT '', '', '', '', '', '', (SELECT country_id FROM country WHERE country = ''), (SELECT level_name FROM level WHERE level_name = ''))
+ AS tmp3
+WHERE NOT EXISTS (
+    SELECT user_username FROM user WHERE user_username = ''
+) LIMIT 1;
+
 
   -- tabela region --
-INSERT INTO `mext`.`region` (`region`) VALUES ('');
+    -- add region --no repeat region
+INSERT INTO region (region)
+SELECT * FROM (SELECT '') AS tmp
+WHERE NOT EXISTS (
+    SELECT region FROM region WHERE region = ''
+) LIMIT 1;
+
+
 
 -- tabela weather --
+   -- add wheater --
 INSERT INTO `mext`.`weather` (`temperature`, `humidity`, `precipitation`) VALUES ('', '', '');
 
 -- tabela achievement --
+  -- add achievment --
 INSERT INTO `mext`.`achievement` (`a_name`) VALUES ('');
 
 -- tabela challenge --
@@ -24,8 +40,10 @@ INSERT INTO `mext`.`race` (`race_startDate`, `race_startTime`, `race_maxSpeed`, 
 INSERT INTO `mext`.`segment` (`s_map`, `s_distance`, `s_discription`, `s_groundType`, `s_totalElevation`) VALUES ('', '', '', '', '');
 
 -- tabela country --
-INSERT INTO `mext`.`country` (`region_id`, `country` ) VALUES ((SELECT region_id FROM region WHERE region = ''), '');
-
-
-
-
+  --add country --no repeat country
+INSERT INTO country (region_id, country)
+SELECT * FROM (SELECT (SELECT region_id FROM region WHERE region = ''), '')
+ AS tmp2
+WHERE NOT EXISTS (
+    SELECT country FROM country WHERE country = ''
+) LIMIT 1;
