@@ -1,7 +1,8 @@
 var mysql = require('mysql');
 
 
-var conn = mysql.createConnection({host:"mext.mysql.database.azure.com", 
+var conn = mysql.createConnection({
+host:"mext.mysql.database.azure.com", 
 user:"username", 
 password:"password", 
 database:"database", 
