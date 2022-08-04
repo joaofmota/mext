@@ -5,9 +5,9 @@ const axios = require('axios');
 
 var conn = mysql.createConnection({
     host:"mext.mysql.database.azure.com", 
-    user:"joao", 
-    password:"Upskill2022", 
-    database:"mext", 
+    user:"", 
+    password:"",
+    database:"", 
     port:3306});
 
    
