@@ -1,0 +1,42 @@
+#João Mota
+CREATE USER 'joao'@'%' IDENTIFIED BY 'StrongPassword!';
+
+GRANT ALL PRIVILEGES ON mext . * TO 'joao'@'%';
+
+#Marilia Esteves
+CREATE USER 'marilia'@'%' IDENTIFIED BY 'StrongPassword!';
+
+GRANT ALL PRIVILEGES ON mext . * TO 'marilia'@'%';
+
+#Daniel Rodrigues
+CREATE USER 'daniel'@'%' IDENTIFIED BY 'StrongPassword!';
+
+GRANT ALL PRIVILEGES ON mext . * TO 'daniel'@'%';
+
+#Daniel Vicente 
+CREATE USER 'vicente'@'%' IDENTIFIED BY 'StrongPassword!';
+
+GRANT ALL PRIVILEGES ON mext . * TO 'vicente'@'%';
+
+
+
+#Check permissions João Mota
+USE mext;
+
+SHOW GRANTS FOR 'joao'@'%';
+
+#Check permissions Marilia Esteves
+USE mext;
+
+SHOW GRANTS FOR 'marilia'@'%';
+
+#Check permissions Daniel Rodrigues
+USE mext;
+
+SHOW GRANTS FOR 'daniel'@'%';
+
+#Check permissions Daniel Vicente
+USE mext;
+
+SHOW GRANTS FOR 'vicente'@'%';
+
