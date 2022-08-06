@@ -1,1 +1,0 @@
-Forms to work with azure functions.
